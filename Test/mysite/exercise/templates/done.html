@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-3">
+            <div class="container">
+                <a href="/" class="btn btn-info" role="button">Test Task</a>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-20">
+            <div class="container">
+                {% for item in json_list %}
+                    {{ item }}</br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

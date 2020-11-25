@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="container">
+                    <button class="add_input, btn btn-warning" onclick="add()">Добавить поле</button>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="container">
+                    <form action="/" method="post" id="form">
+                        {% csrf_token %}
+                        <div class="form-group" id="form-group">
+                            {{ form }}
+                        </div>
+
+                    <button type="submit" class="btn btn-success" id="button-submit">Подтвердить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
